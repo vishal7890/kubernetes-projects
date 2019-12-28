@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: abcd
+
+  bcg:
+    image: drupal:8-apache
+    ports:
+      - 8080:80
+
+    restart: always
